@@ -717,7 +717,7 @@ const copy = {
     },
     contact: {
       eyebrow: "联络我们",
-      title: "预约免费空间规划咨询"
+      title: "预约免费空间规划咨询",
       support:
         "告诉我们单位类型、预算与目标 — 自住、装修出租或管理。我们会在 WhatsApp 回复。",
       cta: "WhatsApp 联系 HomeUP",
