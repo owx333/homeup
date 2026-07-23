@@ -9,18 +9,24 @@ export function Services() {
 
   return (
     <section id="services" className="section-pad section-light relative overflow-hidden">
-      <div className="pointer-events-none absolute -right-8 top-24 select-none font-display text-[22vw] leading-none text-ink/[0.04]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-6 top-10 z-0 hidden select-none text-[min(18vw,12rem)] leading-none text-ink/[0.045] lg:block"
+        style={{ fontFamily: "var(--font-display), system-ui, sans-serif" }}
+      >
         01
       </div>
 
-      <div className="relative mx-auto max-w-[90rem]">
+      <div className="relative z-10 mx-auto max-w-[90rem]">
         <Reveal>
-          <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-end md:gap-20">
-            <div>
+          <div className="grid gap-6 md:grid-cols-[1.15fr_0.85fr] md:items-end md:gap-16">
+            <div className="min-w-0">
               <p className="eyebrow">{t.services.eyebrow}</p>
               <h2 className="display-lg mt-5">{t.services.title}</h2>
             </div>
-            <p className="lede md:pb-2 md:justify-self-end md:text-right">{t.services.support}</p>
+            <p className="lede relative z-10 max-w-md md:justify-self-end md:pb-2 md:text-right">
+              {t.services.support}
+            </p>
           </div>
         </Reveal>
 

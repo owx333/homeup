@@ -90,8 +90,12 @@ html[data-lang="zh"] .font-display {
 }
 
 .section-light .display-lg,
-.section-light .display-xl,
-.section-light .font-display {
+.section-light .display-xl {
+  color: var(--ink);
+}
+
+.section-light h2.font-display,
+.section-light h3.font-display {
   color: var(--ink);
 }
 
