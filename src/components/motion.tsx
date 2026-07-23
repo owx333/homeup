@@ -5,6 +5,9 @@ import type { ReactNode } from "react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+/** Generous margin so fast scroll / overflow ancestors still trigger in-view. */
+const viewport = { once: true, amount: 0.05, margin: "120px 0px" as const };
+
 export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 28 },
   show: {
@@ -39,7 +42,7 @@ export function Reveal({
       className={className}
       initial={{ opacity: 0, y: 36 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
+      viewport={viewport}
       transition={{ duration: 0.85, ease, delay }}
     >
       {children}
@@ -64,7 +67,7 @@ export function Stagger({
       variants={stagger}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={viewport}
     >
       {children}
     </motion.div>

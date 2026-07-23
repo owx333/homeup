@@ -14,8 +14,11 @@ export function Testimonials() {
   const { t } = useLanguage();
 
   return (
-    <section className="section-pad relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,98,11,0.1),transparent_50%)]" />
+    <section className="section-pad relative">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,98,11,0.1),transparent_55%)]"
+      />
 
       <div className="relative mx-auto max-w-[90rem]">
         <Reveal>
@@ -26,7 +29,7 @@ export function Testimonials() {
 
         <Stagger className="mt-12 grid gap-4 md:mt-16 md:grid-cols-3 md:gap-5">
           {t.testimonials.items.map((item, i) => (
-            <StaggerItem key={item.name}>
+            <StaggerItem key={`${item.name}-${i}`}>
               <motion.blockquote
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}
