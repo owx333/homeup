@@ -81,9 +81,9 @@ export const heroSlides = [
   "/stock/hero/hero-1.jpg",
   "/stock/hero/hero-2.jpg",
   "/stock/hero/hero-3.jpg",
-  "/portfolio/living.jpg",
-  "/portfolio/kitchen.jpg",
-  "/portfolio/showroom.jpg",
+  "/stock/hero/hero-4.jpg",
+  "/stock/hero/hero-5.jpg",
+  "/stock/hero/hero-6.jpg",
 ] as const;
 
 export const styleLooks = [
