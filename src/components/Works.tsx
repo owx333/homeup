@@ -5,15 +5,17 @@ import { portfolio, site } from "@/lib/site";
 import { asset } from "@/lib/paths";
 import { useLanguage } from "@/components/LanguageProvider";
 import { Reveal } from "@/components/motion";
+import { useInViewPlay } from "@/hooks/useInViewPlay";
 
 const heights = ["h-[380px] sm:h-[480px]", "h-[460px] sm:h-[580px]", "h-[340px] sm:h-[440px]"];
 
 export function Works() {
   const { lang, t } = useLanguage();
+  const { ref, playing } = useInViewPlay<HTMLElement>();
   const loop = [...portfolio, ...portfolio];
 
   return (
-    <section id="works" className="relative overflow-hidden py-24 md:py-36">
+    <section ref={ref} id="works" className="relative overflow-hidden py-24 md:py-36">
       <div className="relative mx-auto max-w-[90rem] px-5 md:px-10 lg:px-14">
         <Reveal>
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
@@ -53,7 +55,11 @@ export function Works() {
             "linear-gradient(90deg, transparent, black 4%, black 96%, transparent)",
         }}
       >
-        <div className="marquee-track flex items-end gap-4 px-4 md:gap-5">
+        <div
+          className={`marquee-track flex items-end gap-4 px-4 md:gap-5 ${
+            playing ? "" : "is-paused"
+          }`}
+        >
           {loop.map((item, i) => (
             <a
               key={`${item.src}-${i}`}
@@ -66,8 +72,10 @@ export function Works() {
                 src={asset(item.src)}
                 alt={item.title[lang]}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-                sizes="380px"
+                loading="lazy"
+                decoding="async"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 640px) 260px, 380px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent opacity-90" />
               <div className="absolute inset-x-0 bottom-0 translate-y-2 p-6 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">

@@ -244,21 +244,29 @@ html[data-lang="zh"] p {
 }
 
 .marquee-track {
-  animation: marquee 32s linear infinite;
+  animation: marquee 36s linear infinite;
   width: max-content;
 }
 
-.marquee-track:hover {
+.marquee-track:hover,
+.marquee-track.is-paused,
+.marquee-slow.is-paused {
   animation-play-state: paused;
 }
 
 .marquee-slow {
-  animation: marquee 42s linear infinite;
+  animation: marquee 48s linear infinite;
   width: max-content;
 }
 
 .img-drift {
-  animation: drift 20s ease-in-out infinite;
+  animation: drift 28s ease-in-out infinite;
+}
+
+/* Skip layout/paint work for off-screen sections while scrolling. */
+main > section:not(#top) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
 }
 
 .scroll-cue {

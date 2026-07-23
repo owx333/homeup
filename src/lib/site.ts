@@ -27,7 +27,7 @@ export const site = {
 
 export const portfolio = [
   {
-    src: "/portfolio/living.jpg",
+    src: "/portfolio/living.webp",
     title: { en: "Living spaces", zh: "客厅空间" },
     caption: {
       en: "Bright, move-in ready interiors for everyday living.",
@@ -35,7 +35,7 @@ export const portfolio = [
     },
   },
   {
-    src: "/portfolio/kitchen.jpg",
+    src: "/portfolio/kitchen.webp",
     title: { en: "Kitchen & carpentry", zh: "厨房与定制木作" },
     caption: {
       en: "Custom cabinets, islands, and integrated lighting.",
@@ -43,7 +43,7 @@ export const portfolio = [
     },
   },
   {
-    src: "/portfolio/cabinetry.jpg",
+    src: "/portfolio/cabinetry.webp",
     title: { en: "Built-ins", zh: "全屋定制柜" },
     caption: {
       en: "Floor-to-ceiling storage finished for rental or living.",
@@ -51,7 +51,7 @@ export const portfolio = [
     },
   },
   {
-    src: "/portfolio/showroom.jpg",
+    src: "/portfolio/showroom.webp",
     title: { en: "HomeUP showroom", zh: "HomeUP 展厅" },
     caption: {
       en: "Visit us in Damansara Perdana to see the finish quality.",
@@ -59,7 +59,7 @@ export const portfolio = [
     },
   },
   {
-    src: "/portfolio/handover.jpg",
+    src: "/portfolio/handover.webp",
     title: { en: "Project handover", zh: "项目交屋" },
     caption: {
       en: "From worksite to keys — clear handover every time.",
@@ -67,7 +67,7 @@ export const portfolio = [
     },
   },
   {
-    src: "/portfolio/niche.jpg",
+    src: "/portfolio/niche.webp",
     title: { en: "Detail finishes", zh: "细节收尾" },
     caption: {
       en: "Niches, lighting, and carpentry details that elevate the space.",
@@ -78,18 +78,18 @@ export const portfolio = [
 
 /** Concept / mood images (stock) — replace with client photos when ready. */
 export const heroSlides = [
-  "/stock/hero/hero-1.jpg",
-  "/stock/hero/hero-2.jpg",
-  "/stock/hero/hero-3.jpg",
-  "/stock/hero/hero-4.jpg",
-  "/stock/hero/hero-5.jpg",
-  "/stock/hero/hero-6.jpg",
+  "/stock/hero/hero-1.webp",
+  "/stock/hero/hero-2.webp",
+  "/stock/hero/hero-3.webp",
+  "/stock/hero/hero-4.webp",
+  "/stock/hero/hero-5.webp",
+  "/stock/hero/hero-6.webp",
 ] as const;
 
 export const styleLooks = [
   {
     id: "muji",
-    src: "/stock/styles/muji.jpg",
+    src: "/stock/styles/muji.webp",
     title: { en: "Muji / Japandi", zh: "MUJI / 日式简约" },
     blurb: {
       en: "Light wood, calm neutrals, uncluttered storage — quiet everyday living.",
@@ -98,7 +98,7 @@ export const styleLooks = [
   },
   {
     id: "minimal",
-    src: "/stock/styles/minimal.jpg",
+    src: "/stock/styles/minimal.webp",
     title: { en: "Minimal", zh: "极简" },
     blurb: {
       en: "Clean lines, fewer pieces, maximum light — space that breathes.",
@@ -107,7 +107,7 @@ export const styleLooks = [
   },
   {
     id: "luxury",
-    src: "/stock/styles/luxury.jpg",
+    src: "/stock/styles/luxury.webp",
     title: { en: "Luxury", zh: "高端奢感" },
     blurb: {
       en: "Statement materials, layered lighting, hotel-level finish.",
@@ -116,7 +116,7 @@ export const styleLooks = [
   },
   {
     id: "elegant",
-    src: "/stock/styles/elegant.jpg",
+    src: "/stock/styles/elegant.webp",
     title: { en: "Elegant", zh: "贵气" },
     blurb: {
       en: "Deep tones, refined carpentry, polished proportions.",
@@ -125,7 +125,7 @@ export const styleLooks = [
   },
   {
     id: "warm",
-    src: "/stock/styles/warm.jpg",
+    src: "/stock/styles/warm.webp",
     title: { en: "Warm & cosy", zh: "温馨" },
     blurb: {
       en: "Soft textures, warm light, family-friendly layouts.",
@@ -134,7 +134,7 @@ export const styleLooks = [
   },
   {
     id: "contemporary",
-    src: "/stock/styles/contemporary.jpg",
+    src: "/stock/styles/contemporary.webp",
     title: { en: "Contemporary", zh: "现代都会" },
     blurb: {
       en: "Condo-ready modern looks that photograph well for ownstay or rental.",
@@ -146,8 +146,8 @@ export const styleLooks = [
 export const beforeAfterPairs = [
   {
     id: "living",
-    before: "/stock/before-after/before-1.jpg",
-    after: "/stock/before-after/after-1.jpg",
+    before: "/stock/before-after/before-1.webp",
+    after: "/stock/before-after/after-1.webp",
     title: { en: "Living transformation", zh: "客厅改造" },
     caption: {
       en: "From bare unit to a lived-in layout with carpentry, lighting and furniture rhythm.",
@@ -156,8 +156,8 @@ export const beforeAfterPairs = [
   },
   {
     id: "kitchen",
-    before: "/stock/before-after/before-2.jpg",
-    after: "/stock/before-after/after-2.jpg",
+    before: "/stock/before-after/before-2.webp",
+    after: "/stock/before-after/after-2.webp",
     title: { en: "Kitchen & wet works", zh: "厨房与泥作" },
     caption: {
       en: "Work triangle, durable finishes and built-ins planned before site starts.",
@@ -169,7 +169,7 @@ export const beforeAfterPairs = [
 export const journeySteps = [
   {
     step: "01",
-    src: "/stock/journey/01-drawing.jpg",
+    src: "/stock/journey/01-drawing.webp",
     title: { en: "Drawings & space plan", zh: "平面与效果图" },
     description: {
       en: "Layouts, elevations and look-and-feel locked so the build has a clear target.",
@@ -178,7 +178,7 @@ export const journeySteps = [
   },
   {
     step: "02",
-    src: "/stock/journey/02-electrical.jpg",
+    src: "/stock/journey/02-electrical.webp",
     title: { en: "Electrical & services", zh: "电路与管线" },
     description: {
       en: "Power points, lighting circuits and AC routes coordinated before hack-off.",
@@ -187,7 +187,7 @@ export const journeySteps = [
   },
   {
     step: "03",
-    src: "/stock/journey/03-materials.jpg",
+    src: "/stock/journey/03-materials.webp",
     title: { en: "Materials board", zh: "材料确认" },
     description: {
       en: "Tiles, laminates, paints and ironmongery sampled and signed off.",
@@ -196,7 +196,7 @@ export const journeySteps = [
   },
   {
     step: "04",
-    src: "/stock/journey/04-build.jpg",
+    src: "/stock/journey/04-build.webp",
     title: { en: "Build & carpentry", zh: "施工与木作" },
     description: {
       en: "Site works, custom cabinets and finishes with progress checkpoints.",
@@ -205,7 +205,7 @@ export const journeySteps = [
   },
   {
     step: "05",
-    src: "/stock/journey/05-furniture.jpg",
+    src: "/stock/journey/05-furniture.webp",
     title: { en: "Furniture & styling", zh: "家具与配搭" },
     description: {
       en: "Loose furniture, soft furnishings and details that complete the mood.",
@@ -214,7 +214,7 @@ export const journeySteps = [
   },
   {
     step: "06",
-    src: "/stock/journey/06-handover.jpg",
+    src: "/stock/journey/06-handover.webp",
     title: { en: "Handover", zh: "交屋" },
     description: {
       en: "Walkthrough, snag list cleared, keys handed over — optional management next.",

@@ -7,18 +7,21 @@ const display = Archivo_Black({
   variable: "--font-display",
   subsets: ["latin"],
   weight: "400",
+  display: "swap",
 });
 
 const body = Manrope({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700", "800"],
+  display: "swap",
 });
 
 const notoSc = Noto_Sans_SC({
   variable: "--font-zh",
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {

@@ -9,11 +9,11 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const viewport = { once: true, amount: 0.05, margin: "120px 0px" as const };
 
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { opacity: 0, y: 18 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease },
+    transition: { duration: 0.55, ease },
   },
 };
 
@@ -40,10 +40,10 @@ export function Reveal({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 36 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={viewport}
-      transition={{ duration: 0.85, ease, delay }}
+      transition={{ duration: 0.55, ease, delay }}
     >
       {children}
     </motion.div>

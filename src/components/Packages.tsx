@@ -8,9 +8,9 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { Reveal } from "@/components/motion";
 
 const packageImages = {
-  reno: "/stock/styles/contemporary.jpg",
-  ownstay: "/stock/styles/warm.jpg",
-  manage: "/stock/styles/elegant.jpg",
+  reno: "/stock/styles/contemporary.webp",
+  ownstay: "/stock/styles/warm.webp",
+  manage: "/stock/styles/elegant.webp",
 } as const;
 
 export function Packages() {
