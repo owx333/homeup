@@ -80,7 +80,7 @@ export function Hero() {
             initial={reduce ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.28, duration: 0.75, ease }}
-            className="font-display text-[clamp(1.2rem,2.4vw,1.85rem)] leading-[1.2] tracking-[-0.03em] text-mist"
+            className="font-display text-[clamp(1.15rem,2.2vw,1.7rem)] leading-[1.35] tracking-normal text-mist md:tracking-[-0.02em]"
           >
             {t.hero.headline}
           </motion.p>

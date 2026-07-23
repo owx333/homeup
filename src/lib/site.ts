@@ -400,9 +400,9 @@ const copy = {
     },
     process: {
       eyebrow: "The reno journey",
-      title: "Drawing → wiring → materials → build → style → keys.",
+      title: "From drawings to keys.",
       support:
-        "Not just four vague stages — you see how each layer of a professional renovation is planned and executed.",
+        "Drawing → wiring → materials → build → style → handover — every layer of a professional reno, made clear.",
       note: "Journey photos are concept references until project documentation is published.",
     },
     who: {
@@ -504,7 +504,7 @@ const copy = {
     hero: {
       brand: "HomeUP",
       tagline: "设计施工 · 巴生谷",
-      headline: "从风格板到交钥匙 — 同一团队负责到底。",
+      headline: "从风格板到交钥匙，同一团队负责到底",
       support:
         "室内设计、定制木作、装修出租与物业管理。白沙罗展厅提供免费空间规划咨询。",
       ctaPrimary: "免费咨询",
@@ -520,7 +520,7 @@ const copy = {
     },
     styles: {
       eyebrow: "风格馆",
-      title: "先选感觉，再落到细节。",
+      title: "先选感觉，再落到细节",
       support:
         "这些是业主最常问的装修气质 — 我们再按你的单位定制布局、材料与木作。",
       note: "目前为风格参考效果图，客户确认后可换成真实案例照片。",
@@ -528,7 +528,7 @@ const copy = {
     },
     beforeAfter: {
       eyebrow: "改造对比",
-      title: "拖一拖，看空壳到成品的落差。",
+      title: "拖一拖，看空壳到成品的落差",
       support:
         "左右滑动对比。真实 HomeUP 案例图确认后，会替换这组概念对比图。",
       before: "之前",
@@ -537,7 +537,7 @@ const copy = {
     },
     services: {
       eyebrow: "我们的服务",
-      title: "全链路房产解决方案。",
+      title: "全链路房产解决方案",
       support:
         "不必分开找设计师、承包商与中介 — HomeUP 让设计、木作、施工与管理同一团队负责。",
       items: [
@@ -565,7 +565,7 @@ const copy = {
     },
     packages: {
       eyebrow: "方案",
-      title: "先选路径，再细化预算。",
+      title: "先选路径，再细化预算",
       support: "自住或投资出租目标不同 — 我们按结果规划范围与材料。",
       items: [
         {
@@ -604,7 +604,7 @@ const copy = {
     },
     why: {
       eyebrow: "为何选 HomeUP",
-      title: "对标专业一站式公司的做法。",
+      title: "对标专业一站式公司的做法",
       support:
         "吸收 Design & Build 与 Reno-to-Rent 业者的共通优点：流程清楚、责任单一、可实地看展厅。",
       items: [
@@ -628,7 +628,7 @@ const copy = {
     },
     areas: {
       eyebrow: "服务范围",
-      title: "深耕巴生谷。",
+      title: "深耕巴生谷",
       support: "据点在白沙罗 Damansara Perdana，覆盖八打灵、吉隆坡与周边。",
       items: [
         "白沙罗 / 八打灵",
@@ -641,7 +641,7 @@ const copy = {
     },
     works: {
       eyebrow: "精选作品",
-      title: "工地瞬间与展厅质感。",
+      title: "工地瞬间与展厅质感",
       support:
         "HomeUP 项目与展厅实拍 — 更多见 Facebook / Instagram。上方风格与对比区暂用效果图，案例确认后替换。",
       moreFb: "Facebook 看更多",
@@ -649,14 +649,14 @@ const copy = {
     },
     process: {
       eyebrow: "装修旅程",
-      title: "图纸 → 电路 → 材料 → 施工 → 配搭 → 交钥匙。",
+      title: "从图纸到交钥匙",
       support:
-        "不是含糊的四个阶段 — 让你看清专业装修每一层怎么规划、怎么落地。",
+        "图纸 → 电路 → 材料 → 施工 → 配搭 → 交屋：六步看清专业装修怎么落地。",
       note: "流程配图为概念参考，项目实拍档案就绪后可替换。",
     },
     who: {
       eyebrow: "我们服务谁",
-      title: "两种结果，一个伙伴。",
+      title: "两种结果，一个伙伴",
       homeownersTitle: "屋主",
       homeownersBody:
         "把毛坯或旧屋变成真正想回家的地方 — 围绕生活、收纳与舒适度规划。",
@@ -668,7 +668,7 @@ const copy = {
     },
     testimonials: {
       eyebrow: "客户反馈",
-      title: "交屋之后，他们怎么说。",
+      title: "交屋之后，他们怎么说",
       support: "来自交屋与社群推荐的真实感受 — 把钥匙交给我们的人。",
       items: [
         {
@@ -687,7 +687,7 @@ const copy = {
     },
     faq: {
       eyebrow: "常见问题",
-      title: "委托前最常被问到的事。",
+      title: "委托前最常被问到的事",
       items: [
         {
           q: "你们是纯设计，还是设计施工一条龙？",
@@ -717,7 +717,7 @@ const copy = {
     },
     contact: {
       eyebrow: "联络我们",
-      title: "预约免费空间规划咨询。",
+      title: "预约免费空间规划咨询"
       support:
         "告诉我们单位类型、预算与目标 — 自住、装修出租或管理。我们会在 WhatsApp 回复。",
       cta: "WhatsApp 联系 HomeUP",
