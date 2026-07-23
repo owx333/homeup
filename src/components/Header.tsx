@@ -19,11 +19,11 @@ export function Header() {
   }, []);
 
   const links = [
-    { href: "#services", label: t.nav.services },
-    { href: "#packages", label: t.nav.packages },
-    { href: "#works", label: t.nav.works },
+    { href: "#styles", label: t.nav.styles },
+    { href: "#before-after", label: t.nav.beforeAfter },
     { href: "#process", label: t.nav.process },
-    { href: "#faq", label: t.nav.faq },
+    { href: "#works", label: t.nav.works },
+    { href: "#packages", label: t.nav.packages },
     { href: "#contact", label: t.nav.contact },
   ];
 

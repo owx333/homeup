@@ -39,7 +39,7 @@ export function Logo({
         />
       ) : (
         <Image
-          src="/brand/logo.png"
+          src={withBase("/brand/logo.png")}
           alt="HomeUP"
           width={size}
           height={size}

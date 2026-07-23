@@ -7,28 +7,26 @@ export function WhyUs() {
   const { t } = useLanguage();
 
   return (
-    <section className="section-pad relative overflow-hidden">
-      <div className="pointer-events-none absolute right-[-4%] top-10 select-none font-display text-[26vw] leading-none text-white/[0.035]">
-        UP
-      </div>
-
+    <section className="section-pad relative overflow-hidden bg-ink-elevated">
       <div className="relative mx-auto max-w-[90rem]">
         <Reveal>
-          <div className="max-w-3xl">
-            <p className="eyebrow">{t.why.eyebrow}</p>
-            <h2 className="display-lg mt-5 text-mist">{t.why.title}</h2>
-            <p className="lede mt-5">{t.why.support}</p>
+          <div className="grid gap-5 md:grid-cols-[1fr_1fr] md:items-end">
+            <div>
+              <p className="eyebrow">{t.why.eyebrow}</p>
+              <h2 className="display-lg mt-4 text-mist">{t.why.title}</h2>
+            </div>
+            <p className="lede md:text-right">{t.why.support}</p>
           </div>
         </Reveal>
 
-        <Stagger className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4 md:mt-24">
+        <Stagger className="mt-12 grid gap-px overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/10 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
           {t.why.items.map((item, i) => (
             <StaggerItem key={item.title}>
-              <article className="group relative h-full border-t border-brand/50 pt-6">
-                <span className="font-display text-5xl leading-none text-brand/30 transition-colors group-hover:text-brand">
+              <article className="h-full bg-ink p-6 md:p-7">
+                <span className="font-display text-4xl leading-none text-brand">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-6 font-display text-xl tracking-tight text-mist md:text-2xl">
+                <h3 className="mt-5 font-display text-xl tracking-tight text-mist md:text-2xl">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{item.description}</p>

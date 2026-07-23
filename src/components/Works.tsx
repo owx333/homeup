@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { portfolio, site } from "@/lib/site";
+import { asset } from "@/lib/paths";
 import { useLanguage } from "@/components/LanguageProvider";
 import { Reveal } from "@/components/motion";
 
@@ -62,7 +63,7 @@ export function Works() {
               className={`group relative block w-[260px] shrink-0 overflow-hidden rounded-[1.5rem] sm:w-[340px] md:w-[380px] ${heights[i % heights.length]}`}
             >
               <Image
-                src={item.src}
+                src={asset(item.src)}
                 alt={item.title[lang]}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"

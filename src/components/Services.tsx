@@ -24,13 +24,13 @@ export function Services() {
           </div>
         </Reveal>
 
-        <Stagger className="mt-16 md:mt-24">
+        <Stagger className="mt-12 md:mt-16">
           {t.services.items.map((service, index) => (
             <StaggerItem key={service.title}>
               <motion.article
                 whileHover={{ x: 8 }}
                 transition={{ type: "spring", stiffness: 280, damping: 24 }}
-                className="group grid items-baseline gap-2 border-t border-ink/10 py-9 md:grid-cols-[7rem_minmax(0,1fr)_minmax(0,1.1fr)] md:gap-12 md:py-14"
+                className="group grid items-baseline gap-2 border-t border-ink/10 py-7 md:grid-cols-[6rem_minmax(0,1fr)_minmax(0,1.1fr)] md:gap-10 md:py-9"
               >
                 <span className="font-display text-4xl leading-none tracking-tight text-brand/40 transition-colors group-hover:text-brand md:text-6xl">
                   {String(index + 1).padStart(2, "0")}

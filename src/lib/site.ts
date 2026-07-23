@@ -76,12 +76,161 @@ export const portfolio = [
   },
 ] as const;
 
+/** Concept / mood images (stock) — replace with client photos when ready. */
+export const heroSlides = [
+  "/stock/hero/hero-1.jpg",
+  "/stock/hero/hero-2.jpg",
+  "/stock/hero/hero-3.jpg",
+  "/portfolio/living.jpg",
+  "/portfolio/kitchen.jpg",
+  "/portfolio/showroom.jpg",
+] as const;
+
+export const styleLooks = [
+  {
+    id: "muji",
+    src: "/stock/styles/muji.jpg",
+    title: { en: "Muji / Japandi", zh: "MUJI / 日式简约" },
+    blurb: {
+      en: "Light wood, calm neutrals, uncluttered storage — quiet everyday living.",
+      zh: "浅木、低饱和中性色、收纳干净 — 安静的日常感。",
+    },
+  },
+  {
+    id: "minimal",
+    src: "/stock/styles/minimal.jpg",
+    title: { en: "Minimal", zh: "极简" },
+    blurb: {
+      en: "Clean lines, fewer pieces, maximum light — space that breathes.",
+      zh: "干净线条、少而精的家具、光感拉满 — 让空间会呼吸。",
+    },
+  },
+  {
+    id: "luxury",
+    src: "/stock/styles/luxury.jpg",
+    title: { en: "Luxury", zh: "高端奢感" },
+    blurb: {
+      en: "Statement materials, layered lighting, hotel-level finish.",
+      zh: "材质有表情、灯光有层次，接近酒店级收尾。",
+    },
+  },
+  {
+    id: "elegant",
+    src: "/stock/styles/elegant.jpg",
+    title: { en: "Elegant", zh: "贵气" },
+    blurb: {
+      en: "Deep tones, refined carpentry, polished proportions.",
+      zh: "沉稳色调、精致木作、比例讲究 — 一眼有质感。",
+    },
+  },
+  {
+    id: "warm",
+    src: "/stock/styles/warm.jpg",
+    title: { en: "Warm & cosy", zh: "温馨" },
+    blurb: {
+      en: "Soft textures, warm light, family-friendly layouts.",
+      zh: "柔和材质、暖光氛围、适合家庭日常的动线。",
+    },
+  },
+  {
+    id: "contemporary",
+    src: "/stock/styles/contemporary.jpg",
+    title: { en: "Contemporary", zh: "现代都会" },
+    blurb: {
+      en: "Condo-ready modern looks that photograph well for ownstay or rental.",
+      zh: "适合公寓的现代感，自住上镜、出租也好拍。",
+    },
+  },
+] as const;
+
+export const beforeAfterPairs = [
+  {
+    id: "living",
+    before: "/stock/before-after/before-1.jpg",
+    after: "/stock/before-after/after-1.jpg",
+    title: { en: "Living transformation", zh: "客厅改造" },
+    caption: {
+      en: "From bare unit to a lived-in layout with carpentry, lighting and furniture rhythm.",
+      zh: "从空壳单位到有柜体、灯光与家具节奏的可住空间。",
+    },
+  },
+  {
+    id: "kitchen",
+    before: "/stock/before-after/before-2.jpg",
+    after: "/stock/before-after/after-2.jpg",
+    title: { en: "Kitchen & wet works", zh: "厨房与泥作" },
+    caption: {
+      en: "Work triangle, durable finishes and built-ins planned before site starts.",
+      zh: "动线、耐用收尾与柜体 — 动工前先锁方案。",
+    },
+  },
+] as const;
+
+export const journeySteps = [
+  {
+    step: "01",
+    src: "/stock/journey/01-drawing.jpg",
+    title: { en: "Drawings & space plan", zh: "平面与效果图" },
+    description: {
+      en: "Layouts, elevations and look-and-feel locked so the build has a clear target.",
+      zh: "平面、立面与氛围先锁定，施工才有明确目标。",
+    },
+  },
+  {
+    step: "02",
+    src: "/stock/journey/02-electrical.jpg",
+    title: { en: "Electrical & services", zh: "电路与管线" },
+    description: {
+      en: "Power points, lighting circuits and AC routes coordinated before hack-off.",
+      zh: "插座、灯路与冷气走线先协调，再进拆除与开槽。",
+    },
+  },
+  {
+    step: "03",
+    src: "/stock/journey/03-materials.jpg",
+    title: { en: "Materials board", zh: "材料确认" },
+    description: {
+      en: "Tiles, laminates, paints and ironmongery sampled and signed off.",
+      zh: "砖、板材、油漆与五金试样确认后才采购。",
+    },
+  },
+  {
+    step: "04",
+    src: "/stock/journey/04-build.jpg",
+    title: { en: "Build & carpentry", zh: "施工与木作" },
+    description: {
+      en: "Site works, custom cabinets and finishes with progress checkpoints.",
+      zh: "现场施工、定制柜体与收尾，按节点回报进度。",
+    },
+  },
+  {
+    step: "05",
+    src: "/stock/journey/05-furniture.jpg",
+    title: { en: "Furniture & styling", zh: "家具与配搭" },
+    description: {
+      en: "Loose furniture, soft furnishings and details that complete the mood.",
+      zh: "活动家具、布艺与小物配搭，把风格落到实处。",
+    },
+  },
+  {
+    step: "06",
+    src: "/stock/journey/06-handover.jpg",
+    title: { en: "Handover", zh: "交屋" },
+    description: {
+      en: "Walkthrough, snag list cleared, keys handed over — optional management next.",
+      zh: "验收、缺陷清单清完交钥匙 — 也可衔接管理。",
+    },
+  },
+] as const;
+
 const copy = {
   en: {
     nav: {
       services: "Services",
+      styles: "Styles",
       packages: "Packages",
       works: "Works",
+      beforeAfter: "Before / After",
       process: "Process",
       faq: "FAQ",
       contact: "Contact",
@@ -89,20 +238,37 @@ const copy = {
     },
     hero: {
       brand: "HomeUP",
-      tagline: "Your One-Stop Property Solutions",
-      headline: "Design, build & manage — under one roof.",
+      tagline: "Design & Build · Klang Valley",
+      headline: "From mood board to keys — one accountable team.",
       support:
-        "Klang Valley’s one-stop partner for interior design, custom carpentry, Reno-to-Rent and rental management. Free space planning consultation available.",
+        "Interior design, custom carpentry, Reno-to-Rent and management. Free space planning consult at our Damansara showroom.",
       ctaPrimary: "Free consultation",
-      ctaSecondary: "View works",
+      ctaSecondary: "See styles",
     },
     trust: {
       items: [
         { value: "1 team", label: "Design · Build · Manage" },
-        { value: "Free", label: "Space planning consult" },
+        { value: "6 steps", label: "Drawing → handover" },
         { value: "Showroom", label: "Damansara Perdana" },
         { value: "Weekends", label: "Open 9AM–6PM" },
       ],
+    },
+    styles: {
+      eyebrow: "Style gallery",
+      title: "Pick a mood. We build the detail.",
+      support:
+        "Browse looks homeowners ask for most — then we tailor layout, materials and carpentry to your unit.",
+      note: "Concept visuals for style reference. We’ll replace these with your approved project photos.",
+      cta: "Discuss this style",
+    },
+    beforeAfter: {
+      eyebrow: "Before & after",
+      title: "See the jump — empty shell to finished home.",
+      support:
+        "Drag the slider to compare. Real HomeUP case photos will replace these concept pairs once confirmed.",
+      before: "Before",
+      after: "After",
+      note: "Placeholder concept imagery — swap in client site photos anytime.",
     },
     services: {
       eyebrow: "What we do",
@@ -226,43 +392,18 @@ const copy = {
     },
     works: {
       eyebrow: "Selected works",
-      title: "Real projects. Real handovers.",
+      title: "Site moments & showroom finishes.",
       support:
-        "Completed spaces and handover moments from HomeUP — browse more on Facebook & Instagram.",
+        "HomeUP project and showroom captures — more on Facebook & Instagram. Style / before-after sections above use concept visuals until case photos are confirmed.",
       moreFb: "More on Facebook",
       moreIg: "Instagram",
     },
     process: {
-      eyebrow: "How it works",
-      title: "A transparent Design & Build journey.",
+      eyebrow: "The reno journey",
+      title: "Drawing → wiring → materials → build → style → keys.",
       support:
-        "Industry-standard clarity: brief → design lock → build → handover — with optional management after.",
-      steps: [
-        {
-          step: "01",
-          title: "Consult",
-          description:
-            "Free space planning chat. Share unit type, budget, timeline and ownstay vs rental goals.",
-        },
-        {
-          step: "02",
-          title: "Design & quote",
-          description:
-            "Layouts, materials and itemised costing — locked before site works begin.",
-        },
-        {
-          step: "03",
-          title: "Build",
-          description:
-            "On-site execution with progress updates through carpentry, finishes and QC.",
-        },
-        {
-          step: "04",
-          title: "Handover & manage",
-          description:
-            "Walkthrough, keys, and optional tenant sourcing + property management.",
-        },
-      ],
+        "Not just four vague stages — you see how each layer of a professional renovation is planned and executed.",
+      note: "Journey photos are concept references until project documentation is published.",
     },
     who: {
       eyebrow: "Who we help",
@@ -351,8 +492,10 @@ const copy = {
   zh: {
     nav: {
       services: "服务",
+      styles: "风格",
       packages: "方案",
       works: "作品",
+      beforeAfter: "改造对比",
       process: "流程",
       faq: "问答",
       contact: "联络",
@@ -360,20 +503,37 @@ const copy = {
     },
     hero: {
       brand: "HomeUP",
-      tagline: "一站式房产解决方案",
-      headline: "设计、施工与管理 — 一站完成。",
+      tagline: "设计施工 · 巴生谷",
+      headline: "从风格板到交钥匙 — 同一团队负责到底。",
       support:
-        "服务巴生谷：室内设计、定制木作、装修出租与租务管理。提供免费空间规划咨询。",
+        "室内设计、定制木作、装修出租与物业管理。白沙罗展厅提供免费空间规划咨询。",
       ctaPrimary: "免费咨询",
-      ctaSecondary: "查看作品",
+      ctaSecondary: "看看风格",
     },
     trust: {
       items: [
         { value: "一团队", label: "设计 · 施工 · 管理" },
-        { value: "免费", label: "空间规划咨询" },
+        { value: "六步", label: "图纸 → 交屋" },
         { value: "展厅", label: "白沙罗 Perdana" },
         { value: "周末", label: "营业 上午9–下午6" },
       ],
+    },
+    styles: {
+      eyebrow: "风格馆",
+      title: "先选感觉，再落到细节。",
+      support:
+        "这些是业主最常问的装修气质 — 我们再按你的单位定制布局、材料与木作。",
+      note: "目前为风格参考效果图，客户确认后可换成真实案例照片。",
+      cta: "聊聊这个风格",
+    },
+    beforeAfter: {
+      eyebrow: "改造对比",
+      title: "拖一拖，看空壳到成品的落差。",
+      support:
+        "左右滑动对比。真实 HomeUP 案例图确认后，会替换这组概念对比图。",
+      before: "之前",
+      after: "之后",
+      note: "占位效果图 — 随时可换成客户工地实拍。",
     },
     services: {
       eyebrow: "我们的服务",
@@ -481,37 +641,18 @@ const copy = {
     },
     works: {
       eyebrow: "精选作品",
-      title: "真实项目，真实交屋。",
-      support: "HomeUP 完工与交屋实拍 — 更多内容见 Facebook 与 Instagram。",
+      title: "工地瞬间与展厅质感。",
+      support:
+        "HomeUP 项目与展厅实拍 — 更多见 Facebook / Instagram。上方风格与对比区暂用效果图，案例确认后替换。",
       moreFb: "Facebook 看更多",
       moreIg: "Instagram",
     },
     process: {
-      eyebrow: "合作流程",
-      title: "透明的设计施工旅程。",
-      support: "行业标准路径：咨询 → 锁定设计 → 施工 → 交屋，并可衔接租务管理。",
-      steps: [
-        {
-          step: "01",
-          title: "咨询",
-          description: "免费空间规划沟通：单位类型、预算、工期，以及自住或出租目标。",
-        },
-        {
-          step: "02",
-          title: "设计与报价",
-          description: "布局、材料与明细报价确认后，再开始现场施工。",
-        },
-        {
-          step: "03",
-          title: "施工",
-          description: "现场执行并同步进度，涵盖木作、收尾与品控。",
-        },
-        {
-          step: "04",
-          title: "交屋与管理",
-          description: "验收交钥匙；可选继续招租与物业管理。",
-        },
-      ],
+      eyebrow: "装修旅程",
+      title: "图纸 → 电路 → 材料 → 施工 → 配搭 → 交钥匙。",
+      support:
+        "不是含糊的四个阶段 — 让你看清专业装修每一层怎么规划、怎么落地。",
+      note: "流程配图为概念参考，项目实拍档案就绪后可替换。",
     },
     who: {
       eyebrow: "我们服务谁",

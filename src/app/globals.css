@@ -62,13 +62,13 @@ html[data-lang="zh"] .font-display {
 
 .section-pad {
   padding-inline: 1.25rem;
-  padding-block: 6.5rem;
+  padding-block: 4.75rem;
 }
 
 @media (min-width: 768px) {
   .section-pad {
     padding-inline: 2.5rem;
-    padding-block: 9rem;
+    padding-block: 6.5rem;
   }
 }
 
