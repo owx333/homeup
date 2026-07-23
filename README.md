@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HomeUP
 
-## Getting Started
+Marketing site for **HomeUP Management Sdn Bhd** — one-stop renovation & property solutions in the Klang Valley.
 
-First, run the development server:
+**Live:** [https://www.guanzun.my/homeup/](https://www.guanzun.my/homeup/)
+
+## Stack
+
+- Next.js (static export)
+- Tailwind CSS v4
+- Framer Motion
+- EN / 中文 toggle
+
+## Local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://127.0.0.1:3000/homeup](http://127.0.0.1:3000/homeup) (`basePath` is `/homeup`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Static files are published into [`owx333/manisystem`](https://github.com/owx333/manisystem) under `/homeup` (GitHub Pages for `www.guanzun.my`).
 
-## Learn More
+Pushing to `main` runs `.github/workflows/deploy.yml`.
 
-To learn more about Next.js, take a look at the following resources:
+For CI cross-repo push, add a repo secret `DEPLOY_TOKEN` (classic PAT with `repo` scope) on this repository. Without it, deploy from your machine:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+# then copy ./out into manisystem/homeup and push
+```

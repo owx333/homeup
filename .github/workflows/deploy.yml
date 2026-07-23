@@ -1,0 +1,53 @@
+name: Deploy to guanzun.my/homeup
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-homeup
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout HomeUP
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install & build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy into manisystem/homeup
+        env:
+          GH_TOKEN: ${{ secrets.DEPLOY_TOKEN || github.token }}
+        run: |
+          set -euo pipefail
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf /tmp/manisystem
+          git clone --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/owx333/manisystem.git" /tmp/manisystem
+          rm -rf /tmp/manisystem/homeup
+          mkdir -p /tmp/manisystem/homeup
+          cp -R out/. /tmp/manisystem/homeup/
+          touch /tmp/manisystem/homeup/.nojekyll
+          cd /tmp/manisystem
+          git add homeup
+          if git diff --cached --quiet; then
+            echo "No changes to deploy."
+            exit 0
+          fi
+          git commit -m "Deploy HomeUP site to /homeup"
+          git push origin HEAD:main

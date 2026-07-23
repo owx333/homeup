@@ -1,0 +1,607 @@
+export type Lang = "en" | "zh";
+
+export const site = {
+  name: "HomeUP",
+  legalName: "HomeUP Management Sdn Bhd",
+  phone: "016-255 4355",
+  phoneTel: "+60162554355",
+  whatsapp: "https://wa.me/60162554355",
+  whatsappHomeowner:
+    "https://wa.me/60162554355?text=Hi%20HomeUP%2C%20I%27d%20like%20a%20free%20space%20planning%20consultation%20for%20my%20home.",
+  whatsappInvestor:
+    "https://wa.me/60162554355?text=Hi%20HomeUP%2C%20I%27m%20interested%20in%20Reno-to-Rent%20%2F%20property%20management.",
+  whatsappVisit:
+    "https://wa.me/60162554355?text=Hi%20HomeUP%2C%20I%27d%20like%20to%20visit%20your%20Damansara%20showroom.",
+  email: "homeupsb@gmail.com",
+  address: "3-3, Jalan PJU 8/3B, Damansara Perdana",
+  city: "Petaling Jaya, Selangor 47820",
+  hoursWeekday: "Mon–Fri · by appointment",
+  hoursWeekend: "Sat–Sun · 9:00 AM – 6:00 PM",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=3-3+Jalan+PJU+8%2F3B+Damansara+Perdana+Petaling+Jaya+47820",
+  social: {
+    facebook: "https://www.facebook.com/homeupmanagement",
+    instagram: "https://www.instagram.com/homeupmanagement",
+  },
+} as const;
+
+export const portfolio = [
+  {
+    src: "/portfolio/living.jpg",
+    title: { en: "Living spaces", zh: "客厅空间" },
+    caption: {
+      en: "Bright, move-in ready interiors for everyday living.",
+      zh: "明亮、可直接入住的日常起居空间。",
+    },
+  },
+  {
+    src: "/portfolio/kitchen.jpg",
+    title: { en: "Kitchen & carpentry", zh: "厨房与定制木作" },
+    caption: {
+      en: "Custom cabinets, islands, and integrated lighting.",
+      zh: "定制柜体、中岛与嵌入式灯光设计。",
+    },
+  },
+  {
+    src: "/portfolio/cabinetry.jpg",
+    title: { en: "Built-ins", zh: "全屋定制柜" },
+    caption: {
+      en: "Floor-to-ceiling storage finished for rental or living.",
+      zh: "落地收纳柜，适合自住或出租。",
+    },
+  },
+  {
+    src: "/portfolio/showroom.jpg",
+    title: { en: "HomeUP showroom", zh: "HomeUP 展厅" },
+    caption: {
+      en: "Visit us in Damansara Perdana to see the finish quality.",
+      zh: "欢迎到白沙罗 Perdana 展厅体验装修质感。",
+    },
+  },
+  {
+    src: "/portfolio/handover.jpg",
+    title: { en: "Project handover", zh: "项目交屋" },
+    caption: {
+      en: "From worksite to keys — clear handover every time.",
+      zh: "从施工到交钥匙，每次都清楚交接。",
+    },
+  },
+  {
+    src: "/portfolio/niche.jpg",
+    title: { en: "Detail finishes", zh: "细节收尾" },
+    caption: {
+      en: "Niches, lighting, and carpentry details that elevate the space.",
+      zh: "凹龛、灯光与木作细节，提升整体质感。",
+    },
+  },
+] as const;
+
+const copy = {
+  en: {
+    nav: {
+      services: "Services",
+      packages: "Packages",
+      works: "Works",
+      process: "Process",
+      faq: "FAQ",
+      contact: "Contact",
+      whatsapp: "WhatsApp",
+    },
+    hero: {
+      brand: "HomeUP",
+      tagline: "Your One-Stop Property Solutions",
+      headline: "Design, build & manage — under one roof.",
+      support:
+        "Klang Valley’s one-stop partner for interior design, custom carpentry, Reno-to-Rent and rental management. Free space planning consultation available.",
+      ctaPrimary: "Free consultation",
+      ctaSecondary: "View works",
+    },
+    trust: {
+      items: [
+        { value: "1 team", label: "Design · Build · Manage" },
+        { value: "Free", label: "Space planning consult" },
+        { value: "Showroom", label: "Damansara Perdana" },
+        { value: "Weekends", label: "Open 9AM–6PM" },
+      ],
+    },
+    services: {
+      eyebrow: "What we do",
+      title: "Full-stack property solutions.",
+      support:
+        "Unlike hiring separate designers, contractors and agents — HomeUP keeps design, carpentry, build and management accountable under one team.",
+      items: [
+        {
+          title: "Interior Design",
+          description:
+            "Space planning, materials and finishes built around how you live — with layouts locked before works begin.",
+        },
+        {
+          title: "Custom Carpentry",
+          description:
+            "Wardrobes, kitchens and built-ins measured for your unit — not off-the-shelf compromises.",
+        },
+        {
+          title: "Design & Build",
+          description:
+            "One contract from concept to handover. Clear milestones, coordinated trades, progress updates.",
+        },
+        {
+          title: "Reno-to-Rent",
+          description:
+            "Investor-first renovations that lift rental appeal, tenancy speed and returns in the Klang Valley.",
+        },
+        {
+          title: "Property Management",
+          description:
+            "Tenant sourcing, agreements, collections and upkeep — so your unit keeps earning.",
+        },
+      ],
+    },
+    packages: {
+      eyebrow: "Packages",
+      title: "Choose your path.",
+      support:
+        "Whether you are moving in or investing for yield — start with a clear package, then we tailor scope and budget.",
+      items: [
+        {
+          title: "Ownstay Design & Build",
+          audience: "For homeowners",
+          points: [
+            "Consultation & space planning",
+            "Layout, materials & costing",
+            "Custom carpentry & site works",
+            "Handover, move-in ready",
+          ],
+          cta: "Plan my home",
+          hrefKey: "homeowner" as const,
+        },
+        {
+          title: "Reno-to-Rent",
+          audience: "For investors",
+          points: [
+            "Rental-optimised design",
+            "Durable finishes that photograph well",
+            "Faster to tenant-ready",
+            "Optional management after handover",
+          ],
+          cta: "Maximise rental",
+          hrefKey: "investor" as const,
+          featured: true,
+        },
+        {
+          title: "Property Management",
+          audience: "For landlords",
+          points: [
+            "Tenant sourcing & screening",
+            "Tenancy agreements",
+            "Rent collection support",
+            "Maintenance coordination",
+          ],
+          cta: "Manage my unit",
+          hrefKey: "investor" as const,
+        },
+      ],
+    },
+    why: {
+      eyebrow: "Why HomeUP",
+      title: "Built like the best one-stop firms.",
+      support:
+        "Inspired by what serious Design & Build and Reno-to-Rent operators do well — clarity, accountability, and a showroom you can visit.",
+      items: [
+        {
+          title: "Single point of accountability",
+          description:
+            "One team owns design, carpentry and site coordination — fewer gaps than juggling separate vendors.",
+        },
+        {
+          title: "Design locked before build",
+          description:
+            "Layouts, materials and costing are confirmed first — so mid-project surprises stay under control.",
+        },
+        {
+          title: "Ownstay + investor dual track",
+          description:
+            "Move-in homes and rental-ready units need different priorities. We plan for the outcome you want.",
+        },
+        {
+          title: "Visit before you commit",
+          description:
+            "See finish quality at our Damansara Perdana showroom — then book a free space planning consult.",
+        },
+      ],
+    },
+    areas: {
+      eyebrow: "Service area",
+      title: "Serving the Klang Valley.",
+      support:
+        "Based in Damansara Perdana — covering Petaling Jaya, KL and surrounding neighbourhoods.",
+      items: [
+        "Damansara / PJ",
+        "Kuala Lumpur",
+        "Mont Kiara / Sri Hartamas",
+        "Subang / Shah Alam",
+        "Cheras / Ampang",
+        "Other KV areas",
+      ],
+    },
+    works: {
+      eyebrow: "Selected works",
+      title: "Real projects. Real handovers.",
+      support:
+        "Completed spaces and handover moments from HomeUP — browse more on Facebook & Instagram.",
+      moreFb: "More on Facebook",
+      moreIg: "Instagram",
+    },
+    process: {
+      eyebrow: "How it works",
+      title: "A transparent Design & Build journey.",
+      support:
+        "Industry-standard clarity: brief → design lock → build → handover — with optional management after.",
+      steps: [
+        {
+          step: "01",
+          title: "Consult",
+          description:
+            "Free space planning chat. Share unit type, budget, timeline and ownstay vs rental goals.",
+        },
+        {
+          step: "02",
+          title: "Design & quote",
+          description:
+            "Layouts, materials and itemised costing — locked before site works begin.",
+        },
+        {
+          step: "03",
+          title: "Build",
+          description:
+            "On-site execution with progress updates through carpentry, finishes and QC.",
+        },
+        {
+          step: "04",
+          title: "Handover & manage",
+          description:
+            "Walkthrough, keys, and optional tenant sourcing + property management.",
+        },
+      ],
+    },
+    who: {
+      eyebrow: "Who we help",
+      title: "Two outcomes. One partner.",
+      homeownersTitle: "Homeowners",
+      homeownersBody:
+        "Turn a bare or tired unit into a home you want to return to — planned around lifestyle, storage and comfort.",
+      homeownersCta: "Book home consult",
+      investorsTitle: "Investors",
+      investorsBody:
+        "Reno-to-Rent and management that keep units rental-ready, tenanted and earning across the Klang Valley.",
+      investorsCta: "Talk investment reno",
+    },
+    testimonials: {
+      eyebrow: "Social proof",
+      title: "What clients say after handover.",
+      support:
+        "Handover moments and referrals from our Facebook community — the same people who trusted us with their keys.",
+      items: [
+        {
+          quote:
+            "Clear communication from design to handover. The carpentry and finishes felt intentional — not rushed.",
+          name: "Homeowner · Klang Valley",
+        },
+        {
+          quote:
+            "We needed the unit rental-ready fast. HomeUP aligned layout and built-ins for tenants, then helped us move forward.",
+          name: "Investor · Petaling Jaya",
+        },
+        {
+          quote:
+            "Visiting the Damansara showroom helped us decide. Weekend consult made it easy for our family.",
+          name: "Family · Damansara",
+        },
+      ],
+    },
+    faq: {
+      eyebrow: "FAQ",
+      title: "Questions buyers ask before hiring.",
+      items: [
+        {
+          q: "Do you offer Design & Build, or design only?",
+          a: "HomeUP is a one-stop Design & Build partner — interior design, custom carpentry and site coordination under one team, with optional rental management after handover.",
+        },
+        {
+          q: "Is the first consultation free?",
+          a: "Yes. We offer a free space planning consultation. Bring your unit details, budget range and whether the goal is ownstay or rental.",
+        },
+        {
+          q: "What’s the difference between ownstay and Reno-to-Rent?",
+          a: "Ownstay prioritises lifestyle and long-term comfort. Reno-to-Rent prioritises durability, photo appeal and tenant flow so the unit rents faster and earns better.",
+        },
+        {
+          q: "Where do you operate?",
+          a: "We’re based in Damansara Perdana, Petaling Jaya, and serve projects across the Klang Valley.",
+        },
+        {
+          q: "Can I visit before deciding?",
+          a: "Yes — visit our showroom at Damansara Perdana. Weekends we’re open 9:00 AM – 6:00 PM; weekdays by appointment.",
+        },
+        {
+          q: "Do you manage the property after renovation?",
+          a: "Yes. After Reno-to-Rent or ownstay works, you can continue with tenant sourcing and property management under HomeUP.",
+        },
+      ],
+    },
+    contact: {
+      eyebrow: "Get in touch",
+      title: "Book a free space planning consult.",
+      support:
+        "Tell us your property type, budget and goal — ownstay, Reno-to-Rent or management. We’ll reply on WhatsApp.",
+      cta: "WhatsApp HomeUP",
+      ctaVisit: "Book showroom visit",
+      call: "Call",
+      email: "Email",
+      visit: "Showroom",
+      hours: "Hours",
+      company: "Company",
+    },
+    footer: {
+      tagline: "Your One-Stop Property Solutions",
+      rights:
+        "Design & Build Renovation and Property Management in Klang Valley.",
+    },
+  },
+  zh: {
+    nav: {
+      services: "服务",
+      packages: "方案",
+      works: "作品",
+      process: "流程",
+      faq: "问答",
+      contact: "联络",
+      whatsapp: "WhatsApp",
+    },
+    hero: {
+      brand: "HomeUP",
+      tagline: "一站式房产解决方案",
+      headline: "设计、施工与管理 — 一站完成。",
+      support:
+        "服务巴生谷：室内设计、定制木作、装修出租与租务管理。提供免费空间规划咨询。",
+      ctaPrimary: "免费咨询",
+      ctaSecondary: "查看作品",
+    },
+    trust: {
+      items: [
+        { value: "一团队", label: "设计 · 施工 · 管理" },
+        { value: "免费", label: "空间规划咨询" },
+        { value: "展厅", label: "白沙罗 Perdana" },
+        { value: "周末", label: "营业 上午9–下午6" },
+      ],
+    },
+    services: {
+      eyebrow: "我们的服务",
+      title: "全链路房产解决方案。",
+      support:
+        "不必分开找设计师、承包商与中介 — HomeUP 让设计、木作、施工与管理同一团队负责。",
+      items: [
+        {
+          title: "室内设计",
+          description: "空间规划、材料与收尾，贴合生活习惯；动工前先锁定方案。",
+        },
+        {
+          title: "定制木作",
+          description: "衣柜、厨柜与嵌入式收纳按单位量身定制，不做现成凑合。",
+        },
+        {
+          title: "设计与施工",
+          description: "从概念到交屋一份合约，里程碑清楚、工种协调、进度可追踪。",
+        },
+        {
+          title: "装修出租",
+          description: "以投资者回报为导向，提升出租卖相、出租速度与租金表现。",
+        },
+        {
+          title: "物业管理",
+          description: "招租、租约、收租与维修协调，让单位持续产生收益。",
+        },
+      ],
+    },
+    packages: {
+      eyebrow: "方案",
+      title: "先选路径，再细化预算。",
+      support: "自住或投资出租目标不同 — 我们按结果规划范围与材料。",
+      items: [
+        {
+          title: "自住设计施工",
+          audience: "适合屋主",
+          points: [
+            "咨询与空间规划",
+            "布局、材料与报价",
+            "定制木作与现场施工",
+            "交钥匙，可直接入住",
+          ],
+          cta: "规划我家",
+          hrefKey: "homeowner" as const,
+        },
+        {
+          title: "装修出租",
+          audience: "适合投资者",
+          points: [
+            "出租导向设计",
+            "耐用又上镜的收尾",
+            "更快达到可出租状态",
+            "交屋后可选管理",
+          ],
+          cta: "提升租金回报",
+          hrefKey: "investor" as const,
+          featured: true,
+        },
+        {
+          title: "物业管理",
+          audience: "适合房东",
+          points: ["招租与筛选", "租约处理", "收租协助", "维修协调"],
+          cta: "管理我的单位",
+          hrefKey: "investor" as const,
+        },
+      ],
+    },
+    why: {
+      eyebrow: "为何选 HomeUP",
+      title: "对标专业一站式公司的做法。",
+      support:
+        "吸收 Design & Build 与 Reno-to-Rent 业者的共通优点：流程清楚、责任单一、可实地看展厅。",
+      items: [
+        {
+          title: "单一责任窗口",
+          description: "设计、木作与现场协调同一团队，减少多方扯皮。",
+        },
+        {
+          title: "先锁定设计再施工",
+          description: "布局、材料与报价确认后才动工，控制中途加价与变更。",
+        },
+        {
+          title: "自住 / 投资双轨",
+          description: "自住重生活与收纳；出租重耐用与租客动线 — 目标不同，方案不同。",
+        },
+        {
+          title: "先参观再决定",
+          description: "到白沙罗展厅看实景质感，再预约免费空间规划咨询。",
+        },
+      ],
+    },
+    areas: {
+      eyebrow: "服务范围",
+      title: "深耕巴生谷。",
+      support: "据点在白沙罗 Damansara Perdana，覆盖八打灵、吉隆坡与周边。",
+      items: [
+        "白沙罗 / 八打灵",
+        "吉隆坡",
+        "蒙奇亚拉 / Sri Hartamas",
+        "梳邦 / 沙亚南",
+        "蕉赖 / 安邦",
+        "其他巴生谷地区",
+      ],
+    },
+    works: {
+      eyebrow: "精选作品",
+      title: "真实项目，真实交屋。",
+      support: "HomeUP 完工与交屋实拍 — 更多内容见 Facebook 与 Instagram。",
+      moreFb: "Facebook 看更多",
+      moreIg: "Instagram",
+    },
+    process: {
+      eyebrow: "合作流程",
+      title: "透明的设计施工旅程。",
+      support: "行业标准路径：咨询 → 锁定设计 → 施工 → 交屋，并可衔接租务管理。",
+      steps: [
+        {
+          step: "01",
+          title: "咨询",
+          description: "免费空间规划沟通：单位类型、预算、工期，以及自住或出租目标。",
+        },
+        {
+          step: "02",
+          title: "设计与报价",
+          description: "布局、材料与明细报价确认后，再开始现场施工。",
+        },
+        {
+          step: "03",
+          title: "施工",
+          description: "现场执行并同步进度，涵盖木作、收尾与品控。",
+        },
+        {
+          step: "04",
+          title: "交屋与管理",
+          description: "验收交钥匙；可选继续招租与物业管理。",
+        },
+      ],
+    },
+    who: {
+      eyebrow: "我们服务谁",
+      title: "两种结果，一个伙伴。",
+      homeownersTitle: "屋主",
+      homeownersBody:
+        "把毛坯或旧屋变成真正想回家的地方 — 围绕生活、收纳与舒适度规划。",
+      homeownersCta: "预约自住咨询",
+      investorsTitle: "投资者",
+      investorsBody:
+        "装修出租与持续管理，让单位随时可租、稳定收租，覆盖巴生谷。",
+      investorsCta: "洽谈投资装修",
+    },
+    testimonials: {
+      eyebrow: "客户反馈",
+      title: "交屋之后，他们怎么说。",
+      support: "来自交屋与社群推荐的真实感受 — 把钥匙交给我们的人。",
+      items: [
+        {
+          quote: "从设计到交屋沟通清楚，木作与收尾有想法，不赶工。",
+          name: "屋主 · 巴生谷",
+        },
+        {
+          quote: "单位需要尽快可租，HomeUP 按租客需求调整布局与柜体，推进很顺。",
+          name: "投资者 · 八打灵",
+        },
+        {
+          quote: "先去白沙罗展厅看过才决定。周末咨询对全家都很方便。",
+          name: "家庭客户 · 白沙罗",
+        },
+      ],
+    },
+    faq: {
+      eyebrow: "常见问题",
+      title: "委托前最常被问到的事。",
+      items: [
+        {
+          q: "你们是纯设计，还是设计施工一条龙？",
+          a: "HomeUP 是一站式 Design & Build：室内设计、定制木作与现场协调同一团队，交屋后也可衔接租务管理。",
+        },
+        {
+          q: "第一次咨询收费吗？",
+          a: "不收。我们提供免费空间规划咨询。请准备单位资料、预算范围，以及自住或出租目标。",
+        },
+        {
+          q: "自住装修和装修出租有什么不同？",
+          a: "自住强调生活方式与长期舒适；装修出租强调耐用、上镜与租客动线，帮助更快出租、更好回报。",
+        },
+        {
+          q: "服务范围在哪里？",
+          a: "据点在八打灵白沙罗 Damansara Perdana，项目覆盖巴生谷。",
+        },
+        {
+          q: "决定前可以先参观吗？",
+          a: "可以。欢迎参观展厅。周末上午 9 点至下午 6 点营业；平日请先预约。",
+        },
+        {
+          q: "装修后可以帮忙管理物业吗？",
+          a: "可以。装修出租或自住工程后，可继续由 HomeUP 协助招租与物业管理。",
+        },
+      ],
+    },
+    contact: {
+      eyebrow: "联络我们",
+      title: "预约免费空间规划咨询。",
+      support:
+        "告诉我们单位类型、预算与目标 — 自住、装修出租或管理。我们会在 WhatsApp 回复。",
+      cta: "WhatsApp 联系 HomeUP",
+      ctaVisit: "预约参观展厅",
+      call: "电话",
+      email: "电邮",
+      visit: "展厅",
+      hours: "营业时间",
+      company: "公司",
+    },
+    footer: {
+      tagline: "一站式房产解决方案",
+      rights: "巴生谷设计施工装修与物业管理。",
+    },
+  },
+} as const;
+
+export type Copy = (typeof copy)["en"];
+
+export function getCopy(lang: Lang): Copy {
+  return copy[lang] as Copy;
+}
+
+export function whatsappByKey(key: "homeowner" | "investor" | "visit") {
+  if (key === "homeowner") return site.whatsappHomeowner;
+  if (key === "visit") return site.whatsappVisit;
+  return site.whatsappInvestor;
+}
