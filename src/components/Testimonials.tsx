@@ -1,16 +1,21 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useLanguage } from "@/components/LanguageProvider";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
+
+const frames = [
+  "border-brand/45 bg-gradient-to-br from-brand/20 via-ink-elevated to-ink-elevated",
+  "border-white/15 bg-gradient-to-br from-white/[0.07] via-ink-elevated to-ink-elevated",
+  "border-brand/30 bg-gradient-to-br from-brand/10 via-ink-elevated to-ink",
+] as const;
 
 export function Testimonials() {
   const { t } = useLanguage();
 
   return (
     <section className="section-pad relative overflow-hidden">
-      <div className="pointer-events-none absolute left-1/2 top-20 -translate-x-1/2 select-none font-display text-[40vw] leading-none text-white/[0.03]">
-        ”
-      </div>
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(255,98,11,0.1),transparent_50%)]" />
 
       <div className="relative mx-auto max-w-[90rem]">
         <Reveal>
@@ -19,21 +24,31 @@ export function Testimonials() {
           <p className="lede mt-5">{t.testimonials.support}</p>
         </Reveal>
 
-        <Stagger className="mt-16 space-y-0 md:mt-24">
+        <Stagger className="mt-12 grid gap-4 md:mt-16 md:grid-cols-3 md:gap-5">
           {t.testimonials.items.map((item, i) => (
             <StaggerItem key={item.name}>
-              <blockquote
-                className={`grid gap-6 border-t border-white/10 py-10 md:grid-cols-[1fr_auto] md:items-end md:gap-16 md:py-14 ${
-                  i === t.testimonials.items.length - 1 ? "border-b" : ""
-                }`}
+              <motion.blockquote
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300, damping: 24 }}
+                className={`relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border p-7 shadow-[0_14px_40px_rgba(0,0,0,0.28)] md:p-8 ${frames[i % frames.length]}`}
               >
-                <p className="font-display text-[clamp(1.5rem,3.2vw,2.75rem)] leading-[1.15] tracking-[-0.03em] text-mist">
-                  “{item.quote}”
+                <span
+                  aria-hidden
+                  className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-brand via-brand-hot to-transparent"
+                />
+                <span className="font-display text-5xl leading-none text-brand/50">”</span>
+                <p className="mt-4 flex-1 font-display text-xl leading-snug tracking-tight text-mist md:text-2xl">
+                  {item.quote}
                 </p>
-                <footer className="text-xs font-bold uppercase tracking-[0.22em] text-brand md:pb-2 md:text-right">
-                  {item.name}
+                <footer className="mt-8 flex items-center justify-between gap-3 border-t border-white/10 pt-5">
+                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-brand">
+                    {item.name}
+                  </span>
+                  <span className="text-brand" aria-hidden>
+                    ★★★★★
+                  </span>
                 </footer>
-              </blockquote>
+              </motion.blockquote>
             </StaggerItem>
           ))}
         </Stagger>
