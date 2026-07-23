@@ -21,7 +21,7 @@ export function WhyUs() {
 
         <Stagger className="mt-12 grid gap-px overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/10 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
           {t.why.items.map((item, i) => (
-            <StaggerItem key={item.title}>
+            <StaggerItem key={`why-${i}`}>
               <article className="h-full bg-ink p-6 md:p-7">
                 <span className="font-display text-4xl leading-none text-brand">
                   {String(i + 1).padStart(2, "0")}

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -20,10 +20,14 @@ export const fadeUp: Variants = {
 export const stagger: Variants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.1, delayChildren: 0.08 },
+    transition: { staggerChildren: 0.08, delayChildren: 0.04 },
   },
 };
 
+/**
+ * Controlled in-view reveal. Survives EN/中文 switches: once shown, stays visible
+ * even if children remount or layout shifts (unlike whileInView alone).
+ */
 export function Reveal({
   children,
   className,
@@ -34,16 +38,24 @@ export function Reveal({
   delay?: number;
 }) {
   const reduce = useReducedMotion();
+  const [shown, setShown] = useState(false);
+
+  useEffect(() => {
+    if (reduce) setShown(true);
+  }, [reduce]);
+
   if (reduce) {
     return <div className={className}>{children}</div>;
   }
+
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={false}
+      animate={shown ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.55, ease, delay: shown ? delay : 0 }}
       viewport={viewport}
-      transition={{ duration: 0.55, ease, delay }}
+      onViewportEnter={() => setShown(true)}
     >
       {children}
     </motion.div>
@@ -58,16 +70,24 @@ export function Stagger({
   className?: string;
 }) {
   const reduce = useReducedMotion();
+  const [shown, setShown] = useState(false);
+
+  useEffect(() => {
+    if (reduce) setShown(true);
+  }, [reduce]);
+
   if (reduce) {
     return <div className={className}>{children}</div>;
   }
+
   return (
     <motion.div
       className={className}
       variants={stagger}
       initial="hidden"
-      whileInView="show"
+      animate={shown ? "show" : "hidden"}
       viewport={viewport}
+      onViewportEnter={() => setShown(true)}
     >
       {children}
     </motion.div>

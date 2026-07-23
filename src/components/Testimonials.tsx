@@ -29,7 +29,7 @@ export function Testimonials() {
 
         <Stagger className="mt-12 grid gap-4 md:mt-16 md:grid-cols-3 md:gap-5">
           {t.testimonials.items.map((item, i) => (
-            <StaggerItem key={`${item.name}-${i}`}>
+            <StaggerItem key={`testimonial-${i}`}>
               <motion.blockquote
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}

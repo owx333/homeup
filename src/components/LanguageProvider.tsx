@@ -2,8 +2,11 @@
 
 import {
   createContext,
+  startTransition,
+  useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
   type ReactNode,
 } from "react";
@@ -32,15 +35,20 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     document.documentElement.dataset.lang = lang;
   }, [lang]);
 
-  const setLang = (next: Lang) => {
-    setLangState(next);
+  const setLang = useCallback((next: Lang) => {
     window.localStorage.setItem("homeup-lang", next);
-  };
+    startTransition(() => {
+      setLangState(next);
+    });
+  }, []);
+
+  const value = useMemo(
+    () => ({ lang, setLang, t: getCopy(lang) }),
+    [lang, setLang],
+  );
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t: getCopy(lang) }}>
-      {children}
-    </LanguageContext.Provider>
+    <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
   );
 }
 

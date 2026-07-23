@@ -20,9 +20,9 @@ export function Areas() {
         </Reveal>
 
         <div className="mt-14 flex flex-wrap gap-x-8 gap-y-5 md:mt-20 md:gap-x-12">
-          {t.areas.items.map((area) => (
+          {t.areas.items.map((area, i) => (
             <span
-              key={area}
+              key={`area-${i}`}
               className="font-display text-xl tracking-tight text-ink/80 transition-colors hover:text-brand md:text-3xl"
             >
               {area}

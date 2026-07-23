@@ -19,7 +19,7 @@ export function TrustBar() {
         }`}
       >
         {loop.map((item, i) => (
-          <div key={`${item.label}-${i}`} className="flex items-baseline gap-3 md:gap-4">
+          <div key={`trust-${i}`} className="flex items-baseline gap-3 md:gap-4">
             <span className="font-display text-2xl tracking-tight text-ink md:text-4xl">
               {item.value}
             </span>

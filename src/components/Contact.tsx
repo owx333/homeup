@@ -101,8 +101,8 @@ export function Contact() {
                   <p className="mt-1 text-base font-semibold text-ink">{site.legalName}</p>
                 ),
               },
-            ].map((row) => (
-              <div key={row.label}>
+            ].map((row, i) => (
+              <div key={`contact-${i}`}>
                 <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-ink/45">
                   {row.label}
                 </p>

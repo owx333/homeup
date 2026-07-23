@@ -32,7 +32,7 @@ export function Services() {
 
         <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-5">
           {t.services.items.map((service, index) => (
-            <StaggerItem key={service.title}>
+            <StaggerItem key={`service-${index}`}>
               <motion.article
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 320, damping: 24 }}

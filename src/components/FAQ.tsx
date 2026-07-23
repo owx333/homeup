@@ -21,7 +21,7 @@ export function FAQ() {
           {t.faq.items.map((item, i) => {
             const isOpen = open === i;
             return (
-              <div key={item.q}>
+              <div key={`faq-${i}`}>
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}

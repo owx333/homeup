@@ -51,8 +51,8 @@ export function Packages() {
                   {reno.title}
                 </h3>
                 <ul className="mt-7 flex-1 space-y-3">
-                  {reno.points.map((point) => (
-                    <li key={point} className="flex gap-3 text-sm font-medium md:text-base">
+                  {reno.points.map((point, pi) => (
+                    <li key={`reno-${pi}`} className="flex gap-3 text-sm font-medium md:text-base">
                       <span className="mt-2 size-1.5 shrink-0 rounded-full bg-ink" />
                       {point}
                     </li>
@@ -82,7 +82,7 @@ export function Packages() {
           </Reveal>
 
           {sidePackages.map(({ pkg, image }, i) => (
-            <Reveal key={pkg.title} delay={0.08 + i * 0.06} className="md:col-span-5">
+            <Reveal key={image} delay={0.08 + i * 0.06} className="md:col-span-5">
               <motion.article
                 whileHover={{ y: -4 }}
                 className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/12 bg-ink-elevated shadow-[0_12px_40px_rgba(0,0,0,0.35)] transition-colors hover:border-brand/40"
@@ -105,8 +105,8 @@ export function Packages() {
                     {pkg.title}
                   </h3>
                   <ul className="mt-5 flex-1 space-y-2.5">
-                    {pkg.points.map((point) => (
-                      <li key={point} className="flex gap-3 text-sm text-muted">
+                    {pkg.points.map((point, pi) => (
+                      <li key={`pkg-${i}-${pi}`} className="flex gap-3 text-sm text-muted">
                         <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-brand" />
                         {point}
                       </li>
