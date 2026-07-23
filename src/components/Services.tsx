@@ -30,21 +30,25 @@ export function Services() {
           </div>
         </Reveal>
 
-        <Stagger className="mt-12 md:mt-16">
+        <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-5">
           {t.services.items.map((service, index) => (
             <StaggerItem key={service.title}>
               <motion.article
-                whileHover={{ x: 8 }}
-                transition={{ type: "spring", stiffness: 280, damping: 24 }}
-                className="group grid items-baseline gap-2 border-t border-ink/10 py-7 md:grid-cols-[6rem_minmax(0,1fr)_minmax(0,1.1fr)] md:gap-10 md:py-9"
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 320, damping: 24 }}
+                className="group relative flex h-full flex-col overflow-hidden rounded-[1.35rem] border border-ink/10 bg-white p-6 shadow-[0_10px_30px_rgba(10,9,8,0.06)] transition-shadow hover:border-brand/35 hover:shadow-[0_18px_40px_rgba(10,9,8,0.1)] md:p-7"
               >
-                <span className="font-display text-4xl leading-none tracking-tight text-brand/40 transition-colors group-hover:text-brand md:text-6xl">
+                <span
+                  aria-hidden
+                  className="absolute inset-y-0 left-0 w-[3px] bg-brand/70 transition-all group-hover:w-1 group-hover:bg-brand"
+                />
+                <span className="font-display text-4xl leading-none tracking-tight text-brand/35 transition-colors group-hover:text-brand md:text-5xl">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-display text-[1.65rem] tracking-tight text-ink md:text-[2.35rem]">
+                <h3 className="mt-5 font-display text-[1.45rem] tracking-tight text-ink md:text-[1.75rem]">
                   {service.title}
                 </h3>
-                <p className="max-w-md text-sm leading-relaxed text-ink/55 md:justify-self-end md:text-right md:text-base">
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/55 md:text-[0.95rem]">
                   {service.description}
                 </p>
               </motion.article>
