@@ -21,7 +21,8 @@ function CompareSlider({
   title: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [pos, setPos] = useState(50);
+  // Default more to the before side so the "before" state is obvious on first view.
+  const [pos, setPos] = useState(68);
   const dragging = useRef(false);
 
   const update = useCallback((clientX: number) => {

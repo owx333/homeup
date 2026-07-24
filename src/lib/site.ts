@@ -146,8 +146,8 @@ export const styleLooks = [
 export const beforeAfterPairs = [
   {
     id: "living",
-    before: "/stock/before-after/before-1.webp",
-    after: "/stock/before-after/after-1.webp",
+    before: "/stock/before-after/living-before.webp",
+    after: "/stock/before-after/living-after.webp",
     title: { en: "Living transformation", zh: "客厅改造" },
     caption: {
       en: "From bare unit to a lived-in layout with carpentry, lighting and furniture rhythm.",
@@ -156,8 +156,8 @@ export const beforeAfterPairs = [
   },
   {
     id: "kitchen",
-    before: "/stock/before-after/before-2.webp",
-    after: "/stock/before-after/after-2.webp",
+    before: "/stock/before-after/kitchen-before.webp",
+    after: "/stock/before-after/kitchen-after.webp",
     title: { en: "Kitchen & wet works", zh: "厨房与泥作" },
     caption: {
       en: "Work triangle, durable finishes and built-ins planned before site starts.",
