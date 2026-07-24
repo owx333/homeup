@@ -24,14 +24,20 @@ const notoSc = Noto_Sans_SC({
   display: "swap",
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.guanzun.my/homeup"),
   title: "HomeUP | One-Stop Renovation & Property Solutions",
   description:
     "Design & Build Renovation and Property Management in Klang Valley. Interior design, custom carpentry, Reno-to-Rent, and rental management. 巴生谷一站式装修与物业管理。",
   icons: {
-    icon: "/brand/logo.png",
-    apple: "/brand/logo.png",
+    icon: [
+      { url: `${basePath}/favicon.ico`, sizes: "any" },
+      { url: `${basePath}/brand/favicon-32.png`, type: "image/png", sizes: "32x32" },
+      { url: `${basePath}/brand/icon-192.png`, type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: `${basePath}/brand/apple-touch-icon.png`, sizes: "180x180" }],
   },
   openGraph: {
     title: "HomeUP | One-Stop Renovation & Property Solutions",
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
       "Helping homeowners & investors create move-in or rental-ready homes across the Klang Valley.",
     type: "website",
     locale: "en_MY",
-    images: ["/brand/logo.png"],
+    images: [`${basePath}/brand/logo.png`],
   },
 };
 
