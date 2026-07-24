@@ -178,7 +178,7 @@ export const journeySteps = [
   },
   {
     step: "02",
-    src: "/stock/journey/02-electrical.webp",
+    src: "/stock/journey/02-electrical-my.webp",
     title: { en: "Electrical & services", zh: "电路与管线" },
     description: {
       en: "Power points, lighting circuits and AC routes coordinated before hack-off.",
@@ -187,7 +187,7 @@ export const journeySteps = [
   },
   {
     step: "03",
-    src: "/stock/journey/03-materials.webp",
+    src: "/stock/journey/03-materials-my.webp",
     title: { en: "Materials board", zh: "材料确认" },
     description: {
       en: "Tiles, laminates, paints and ironmongery sampled and signed off.",
